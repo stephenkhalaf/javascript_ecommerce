@@ -1,0 +1,254 @@
+*{
+    box-sizing: border-box;
+    margin: 0
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+button{
+    min-width: 100px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    height: 60px;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.navbar>div{
+    font-size: 30px
+}
+
+.nav-cart-btn{
+    position: relative;
+}
+.cart-items{
+    position:absolute;
+    top: 2px;
+    right: 10px;
+    color: white;
+    background: red;
+    font-size: 20px;
+    padding: 0 2px
+}
+
+.container{
+    background:black url('../practice/images/island.png') no-repeat center/cover;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner{
+    display: grid;
+    gap: 40px;
+    background: black;
+    color: white;
+    padding: 40px;
+    min-width: 50%;
+    text-align:center;
+    border-radius: 50px;
+}
+
+.banner > div{
+    font-size: 30px
+}
+
+.banner button{
+    transition: all 1s ease
+}
+
+.banner button:hover{
+    background: transparent;
+    color: white;
+    transform: scale(2) 
+}
+.products{
+    display: grid;
+    gap: 30px;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 90vw;
+    margin: auto
+}
+
+.myproducts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90%
+}
+
+.img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.product-image{
+    position: relative;
+
+}
+
+button:disabled{
+    color: red;
+    transform: translateX(0);
+    opacity: 1
+}
+
+
+.product-image button{
+    position: absolute;
+    top:170px;
+    right: 2px;
+    
+}
+
+.product{
+    text-align: center;
+}
+
+.product h4{
+    margin: 10px 0;
+    color: red
+}
+
+
+.product-image:hover{
+   display: block
+}
+
+
+
+.cart-btn{
+    transform: translateX(101%);
+    opacity:0;
+    transition: all 1s ease;
+}
+
+.product-image:hover .cart-btn{
+    transform: translateX(0%);
+    opacity: .7;
+    color: green
+}
+
+.product-image:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+
+.cart-overlay{
+    position: absolute;
+    top:0;
+    right:0;
+    min-width: 30%;
+    background: lightgreen;
+    min-height: 100vh;
+    padding: 15px;
+    height: 100%;
+    z-index: 1;
+    display:none
+}
+
+.cart-overlay > span{
+    background: red;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    color: white;
+}
+
+.cart-overlay .title{
+    text-align: center;
+    margin-bottom: 30px 
+}
+
+.cart-content{
+    display: grid;
+    gap: 30px;
+}
+
+
+.my-cart-content{
+    display: flex;
+}
+
+.my-cart-content img{
+    margin-right: 20px;
+    margin-left: 5px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.my-cart-content div{
+    display: grid;
+    margin-right: 10px;
+}
+
+.cart-controls{
+    margin-left: auto;
+    margin-right:20px
+}
+
+.cart-controls{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-controls span{
+    cursor: pointer; 
+}
+
+.remove-item{
+    cursor: pointer;
+    opacity: 0.5
+}
+
+.cart-footer{
+    display: grid;
+    gap: 30px;
+    text-align: center;
+    margin-top: 20px
+}
+
+.cart-footer button{
+    width: 50%;
+    margin: auto;
+    background: red;
+    color: white
+}
+
+.cart-footer button:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    transition: all 1s ease;
+}
+.close-cart{
+    cursor: pointer;
+}
